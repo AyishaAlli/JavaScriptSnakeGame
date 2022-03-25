@@ -4,12 +4,13 @@ import {
   draw as drawSnake,
   snakeBody,
 } from "./snake.js";
-import { draw as drawApple, xaxis, yaxis } from "./apple.js";
+import { draw as drawApple } from "./apple.js";
 import { checkApples } from "./checkApples.js";
-let lastRenderTime = 0;
-const gameBoard = document.getElementById("gameBoard");
-export let applesEaten = 0;
 
+export const gameBoard = document.getElementById("gameBoard");
+
+
+let lastRenderTime = 0;
 function main(currentTime) {
   window.requestAnimationFrame(main);
   const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000; // lines 6&7 refresh/rereneder the page so the game can be updated
@@ -20,9 +21,10 @@ function main(currentTime) {
   // console.log("Render")
   lastRenderTime = currentTime;
 
-//update()
+update()
  draw();
- //checkApples(snakeBody);
+ 
+checkApples(snakeBody);
 }
 
 window.requestAnimationFrame(main);
@@ -35,4 +37,7 @@ function draw() {
   gameBoard.innerHTML = "";
   drawSnake(gameBoard);
   drawApple(gameBoard);
+  
+  
 }
+ 

@@ -1,11 +1,13 @@
-let applesEaten = 0;
+let score = document.querySelector('.score')
 
-export let xaxis = Math.ceil(Math.random() * 21);
-export let yaxis = Math.ceil(Math.random() * 21);
-export let apple = { x: xaxis, y: yaxis };
+export let apple = { x: xaxis, y: yaxis};
+
+//import { applesEaten } from "./game.js";
 
 export function draw(gameBoard) {
+    //score.innerHTML = applesEaten;
 
+    
   let applElement = document.createElement("div");
   applElement.style.gridColumnStart = apple.x;
   applElement.style.gridRowStart = apple.y;

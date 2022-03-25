@@ -1,0 +1,9 @@
+done 
+draw snake 
+draw apple
+move snake 
+add points 
+display points
+
+todo 
+create new apple
