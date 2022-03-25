@@ -1,7 +1,7 @@
 const x = []; // X AXIS ARRAY
 const y= []; // X AXIS ARRAY
 let bodyParts=2;
-let applesEaten=0;
+
 let direction='R';
 let running=false; 
 

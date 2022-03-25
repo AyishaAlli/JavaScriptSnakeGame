@@ -11,7 +11,7 @@ body{
     align-items: center;
     background-color: black;
 }
-.gameBoard {
+#gameBoard {
     background-color: #ccc;
     width: 100vmin;
     height: 100vmin;
@@ -23,11 +23,11 @@ body{
 
 .snake{
     background-color: blue;
-    border: 25vmin solid black;
+    border: .25vmin solid black;
 }
 
 .apple {
     background-color: red;
-    border: 25vmin solid black;
+    border: .25vmin solid black;
 }
 
