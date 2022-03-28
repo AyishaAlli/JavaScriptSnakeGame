@@ -6,6 +6,9 @@ import {
 } from "./snake.js";
 import { draw as drawApple } from "./apple.js";
 import { checkApples } from "./checkApples.js";
+import { checkCollisions } from "./checkCollisions.js";
+
+
 
 export const gameBoard = document.getElementById("gameBoard");
 
@@ -25,6 +28,7 @@ update()
  draw();
  
 checkApples(snakeBody);
+checkCollisions()
 }
 
 window.requestAnimationFrame(main);
@@ -41,3 +45,7 @@ function draw() {
   
 }
  
+
+export function gameOver(){
+  gameBoard.style.display = "none"
+}

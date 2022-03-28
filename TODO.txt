@@ -4,6 +4,7 @@ draw apple
 move snake 
 add points 
 display points
+create new apple
 
 todo 
-create new apple
+Check for body collisions 

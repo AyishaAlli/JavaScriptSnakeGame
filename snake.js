@@ -1,11 +1,11 @@
-export const SPEED = 1; // The hieght the number, the faster it moves
+export const SPEED = 4; // The hieght the number, the faster it moves
 export let snakeBody = [
   { x: 11, y: 11 },
   { x: 12, y: 11 },
   { x: 13, y: 11 }
   
 ]; // an array of x and y posistions
-let bodyParts = 1;
+//let bodyParts = snakeBody.length;
 let direction = "D"; // the direction the snake will be moving in
 
 export function draw(gameBoard) {
@@ -66,3 +66,7 @@ export function update() {
 }
 
 //function checkApples()
+
+export function growSnake(){
+  snakeBody.push({ x: snakeBody[0].x, y: snakeBody[0].y }); //adds an extra body part by adding another object to the snakeBody array - x-axis + 1
+}
