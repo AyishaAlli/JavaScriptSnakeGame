@@ -4,9 +4,17 @@
     box-sizing: border-box;
 }
 
-h1, .scoreContainer{
+h1, .scoreContainer, .youLose{
     color: #ccc;
     font-family: sans-serif;
+}
+.scoreContainer{
+    margin-top: 35px;
+}
+.youLose{
+    position: absolute;
+    font-size: 20px;
+    margin-top: 15px;
 }
 
 body{

@@ -1,26 +1,22 @@
-import {applesEaten} from './checkApples.js'
-let score = document.querySelector('.score')
+import { applesEaten } from "./checkApples.js";
+let score = document.querySelector(".score");
 
+export let appleX = 3;
+export let appleY = 16;
 
-export let apple = { x: 3, y: 16};
-
-export function randomPos(){
-  let xaxis = Math.ceil(Math.random()*21)
-  let yaxis = Math.ceil(Math.random()*21)
-  return apple = { x: xaxis, y: yaxis};
-  }
-
-
+export function randomPos() {
+  appleX = Math.ceil(Math.random() * 21);
+  appleY = Math.ceil(Math.random() * 21);
+}
 
 //import { applesEaten } from "./game.js";
 
 export function draw(gameBoard) {
-    //score.innerHTML = applesEaten;
-score.innerHTML = applesEaten
-    
+  //score.innerHTML = applesEaten;
+  score.innerHTML = applesEaten;
   let applElement = document.createElement("div");
-  applElement.style.gridColumnStart = apple.x;
-  applElement.style.gridRowStart = apple.y;
+  applElement.style.gridColumnStart = appleX;
+  applElement.style.gridRowStart = appleY;
   applElement.classList.add("apple");
   gameBoard.appendChild(applElement);
 }
