@@ -1,7 +1,7 @@
 # JavaScript Snake Game 
 Inspired by a Java SnakeGame that I made. I wanted to see if i could make the same game in JavaScript. 
 
-[Live Demo Site]()
+[Live Demo Site](https://javascriptsnakegamebyayisha.netlify.app/)
 
 ## Installation
 ```bash
