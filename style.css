@@ -16,7 +16,7 @@ h1,
 .youLose {
   position: absolute;
   font-size: 20px;
-  margin-top: 50px;
+  margin-top: 120px;
 }
 
 body {
@@ -46,32 +46,4 @@ body {
 .apple {
   background-color: red;
   border: 0.25vmin solid black;
-}
-
-.levels {
-  color: white;
-  cursor: pointer;
-  padding: 5px;
-}
-
-#easy,
-#medium,
-#hard {
-  padding: 5px 15px;
-  
-}
-#easy:hover,
-#medium:hover,
-#hard:hover {
-  padding: 5px 15px;
-  color: gray;
-}
-
-.gameOverLevels {
-  padding: 0px 25px;
-  background-color: green;
-}
-.gameOverLevels:hover {
-  color: black;
-  background-color: white;
 }

@@ -11,7 +11,7 @@ export const gameBoard = document.getElementById("gameBoard");
 export const WIDTH = 21; // defined in CCS - grid width
 export const HEIGHT = 21; //// defined in CCS - grid height
 let running = true;
-let speed = 500; // The hieght the number, the faster the snake will move
+let speed = 150; // The lower the number, the faster it moves 
 
 // Game Levels
 // const easy = document.getElementById("easy");
@@ -30,14 +30,15 @@ function main() {
 
       // Repeat
       main();
-    }, 500);
+    }, speed);
   }
 }
 main();
 
 function update() {
   updateSnake();
-  checkCollisions();
+  console.log(speed);
+  checkCollisions();checkApples(snakeBody)
 }
 
 function draw() {
