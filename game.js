@@ -11,46 +11,26 @@ export const gameBoard = document.getElementById("gameBoard");
 export const WIDTH = 21; // defined in CCS - grid width
 export const HEIGHT = 21; //// defined in CCS - grid height
 let running = true;
-//let lastRenderTime = 0;
+let speed = 150; // The lower the number, the faster it moves 
 
- 
-//reload = location.reload();
 // Game Levels
-const easy = document.getElementById("easy");
-const medium = document.getElementById("medium");
-const hard = document.getElementById("hard");
-
-// function main(currentTime) { // this function makes the page rerender so the icons can appear to be moving
-//   window.requestAnimationFrame(main);
-//   const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000; // lines 6&7 refresh/rereneder the page so the game can be updated
-//   if (secondsSinceLastRender < 1 / speed) {
-//     return;
-//   }
-//   lastRenderTime = currentTime;
-
-//   update()
-//   draw();
-
-//   checkApples(snakeBody);
-// }
+// const easy = document.getElementById("easy");
+// const medium = document.getElementById("medium");
+// const hard = document.getElementById("hard");
 
 
-//window.requestAnimationFrame(main);
-let speed = 500;
+
+
 function main() {
   if (running) {
-    
     setTimeout(function onTick() {
       
       update();
       draw();
-      checkApples(snakeBody);
-      // Call main again so it reruns over and over 
+
+      // Repeat
       main();
-      
     }, speed);
-  } else {
-    gameOver()
   }
 }
 main();
@@ -58,7 +38,7 @@ main();
 function update() {
   updateSnake();
   console.log(speed);
-  checkCollisions();
+  checkCollisions();checkApples(snakeBody)
 }
 
 function draw() {
@@ -70,8 +50,6 @@ function draw() {
 export function gameOver() {
   running = false;
   gameBoard.style.display = "none";
-  easy.classList.add("gameOverLevels");
-  medium.classList.add("gameOverLevels");
-  hard.classList.add("gameOverLevels");
-  document.querySelector(".levels").style.paddingTop = "100px";
+  //gameBoard.style.visibility = "hidden"
+  
 }
