@@ -1,49 +1,76 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1, .scoreContainer, .youLose{
-    color: #ccc;
-    font-family: sans-serif;
+h1,
+.scoreContainer,
+.youLose {
+  color: #ccc;
+  font-family: sans-serif;
 }
-.scoreContainer{
-    margin-top: 35px;
+.scoreContainer {
+  margin-top: 15px;
 }
-.youLose{
-    position: absolute;
-    font-size: 20px;
-    margin-top: 15px;
+.youLose {
+  position: absolute;
+  font-size: 20px;
+  margin-top: 50px;
 }
 
-body{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
 }
 #gameBoard {
-    background-color: #ccc;
-    width: 100vmin;
-    height: 100vmin;
-    display: grid;
-    grid-template-rows: repeat(21, 1fr);
-    grid-template-columns: repeat(21, 1fr);
-    
+  background-color: #ccc;
+  width: 85vmin;
+  height: 80vmin;
+  display: grid;
+  grid-template-rows: repeat(21, 1fr);
+  grid-template-columns: repeat(21, 1fr);
 }
 
-.snake{
-    background-color: blue;
-    border: .25vmin solid black;
-    z-index: 1;
+.snake {
+  background-color: blue;
+  border: 0.25vmin solid black;
+  z-index: 1;
 }
 
 .apple {
-    background-color: red;
-    border: .25vmin solid black;
+  background-color: red;
+  border: 0.25vmin solid black;
 }
 
+.levels {
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+}
+
+#easy,
+#medium,
+#hard {
+  padding: 5px 15px;
+}
+#easy:hover,
+#medium:hover,
+#hard:hover {
+  padding: 5px 15px;
+  color: gray;
+}
+
+.gameOverLevels {
+  padding: 0px 25px;
+  background-color: green;
+}
+.gameOverLevels:hover {
+  color: black;
+  background-color: white;
+}

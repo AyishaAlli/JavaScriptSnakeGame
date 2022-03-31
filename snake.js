@@ -1,4 +1,3 @@
-export const SPEED = 4; // The hieght the number, the faster it moves
 export let snakeBody = [
   { x: 11, y: 11 },
   { x: 12, y: 11 },
