@@ -8,6 +8,8 @@ Inspired by a Java SnakeGame that I made. I wanted to see if i could make the sa
 
 git clone https://github.com/AyishaAlli/JavaScriptSnakeGame.git 
 
+npm i
+
 ```
 Using LiveServer Extension (VSC) Right click HTML file and click on preview with LiveServer
 
